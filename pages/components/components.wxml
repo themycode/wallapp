@@ -1,0 +1,33 @@
+<!-- pages/components/components.wxml -->
+<view class="container">
+  <view class="header">
+    <text class="title">组件展示</text>
+    <text class="subtitle">探索小程序的各种组件</text>
+  </view>
+  <view class="component-list">
+    <navigator url="/pages/component-detail/index?id=button" class="component-item">
+      <view class="component-icon"></view>
+      <view class="component-info">
+        <text class="component-name">按钮组件</text>
+        <text class="component-desc">包含多种样式的按钮展示</text>
+      </view>
+      <text class="arrow">></text>
+    </navigator>
+    <navigator url="/pages/component-detail/index?id=form" class="component-item">
+      <view class="component-icon"></view>
+      <view class="component-info">
+        <text class="component-name">表单组件</text>
+        <text class="component-desc">常用的表单输入组件</text>
+      </view>
+      <text class="arrow">></text>
+    </navigator>
+    <navigator url="/pages/component-detail/index?id=list" class="component-item">
+      <view class="component-icon"></view>
+      <view class="component-info">
+        <text class="component-name">列表组件</text>
+        <text class="component-desc">多样化的列表展示方式</text>
+      </view>
+      <text class="arrow">></text>
+    </navigator>
+  </view>
+</view>

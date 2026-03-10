@@ -1,0 +1,80 @@
+page {
+  background: #000;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.preview-swiper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.preview-image {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.controls {
+  position: fixed;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease;
+}
+
+.controls.hidden {
+  opacity: 0;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 88rpx;
+  padding-top: env(safe-area-inset-top);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+  display: flex;
+  align-items: center;
+}
+
+.back {
+  padding: 20rpx 30rpx;
+}
+
+.back text {
+  color: #fff;
+  font-size: 40rpx;
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30rpx;
+  padding-bottom: calc(30rpx + env(safe-area-inset-bottom));
+  background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0));
+}
+
+.download-btn {
+  background: #FFD700;
+  color: #000;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  padding: 20rpx 0;
+  width: 90%;
+  margin: 0 auto;
+  border: none;
+}

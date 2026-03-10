@@ -1,0 +1,63 @@
+<!-- pages/about/about.wxml -->
+<view class="container">
+  <view class="logo-container">
+    <image class="logo" src="/images/logo.png" mode="aspectFit"></image>
+    <text class="app-name">壁纸小程序</text>
+    <text class="version">版本 {{version}}</text>
+  </view>
+  <view class="card">
+    <view class="card-title">应用介绍</view>
+    <view class="card-content">
+      <text class="description">壁纸小程序是一款提供高清壁纸浏览和下载的应用，让您的设备焕然一新。</text>
+      <view class="feature-list">
+        <view class="feature-item" wx:for="{{features}}" wx:key="*this">
+          <text class="feature-dot">•</text>
+          <text class="feature-text">{{item}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="card">
+    <view class="card-title">联系我们</view>
+    <view class="card-content">
+      <view class="contact-item">
+        <text class="contact-label">开发者：</text>
+        <text class="contact-value">{{developer}}</text>
+      </view>
+      <view class="contact-item" bindtap="copyEmail">
+        <text class="contact-label">邮箱：</text>
+        <text class="contact-value email">{{email}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="feedback-button" bindtap="goToFeedback">
+    <text>意见反馈</text>
+  </view>
+  <view class="copyright">
+    <text>Copyright © 2023 壁纸小程序</text>
+  </view>
+  <view class="about-container">
+    <view class="app-info">
+      <image class="app-logo" src="/images/logo.png" mode="aspectFit"></image>
+      <view class="app-name">壁纸小程序</view>
+      <view class="app-version">版本 1.0.0</view>
+    </view>
+    <view class="section">
+      <view class="section-title">关于我们</view>
+      <view class="section-content">这是一个提供精美壁纸的小程序，希望能为您的设备带来独特的视觉体验。</view>
+    </view>
+    <view class="section">
+      <view class="section-title">功能介绍</view>
+      <view class="section-content">
+        • 海量壁纸资源
+        • 高清图片预览
+        • 便捷下载保存
+        • 分类浏览功能
+      </view>
+    </view>
+    <view class="section">
+      <view class="section-title">联系我们</view>
+      <view class="section-content">如果您有任何问题或建议，欢迎与我们联系。</view>
+    </view>
+  </view>
+</view>

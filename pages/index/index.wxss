@@ -1,0 +1,250 @@
+/* pages/index/index.wxss */
+page {
+  /* background-color: #000;  改为黑色背景，使图片之间的间隙不那么明显 */
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;/*  防止水平滚动 */
+}
+
+.container {
+  padding: 0 0 30rpx 0;
+}
+
+/* 类别选择器样式 */
+.category-scroll {
+  background-color: #fff;
+  white-space: nowrap;
+  padding: 20rpx 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.category-list {
+  display: flex;
+  padding: 0 20rpx;
+}
+
+.category-item {
+  display: inline-block;
+  padding: 12rpx 30rpx;
+  margin-right: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+  background-color: #f5f5f5;
+  border-radius: 30rpx;
+  transition: all 0.3s;
+}
+
+.category-item.active {
+  color: #fff;
+  background-color: #1296db;
+}
+
+/* 壁纸列表样式 - 三张一排带间距 */
+.wallpaper-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 12rpx;
+  row-gap: 24rpx;
+  padding: 12rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.wallpaper-item {
+  position: relative;
+  padding-bottom: 180%;
+  width: 100%;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.wallpaper-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 6rpx rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.wallpaper-image:active {
+  transform: scale(0.98);
+}
+
+/* 添加页面过渡效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 优化加载提示样式 */
+.loading-container {
+  padding: 30rpx 0;
+  text-align: center;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.loading::before {
+  content: "";
+  width: 30rpx;
+  height: 30rpx;
+  border: 2rpx solid #666;
+  border-top-color: transparent;
+  border-radius: 50%;
+  margin-right: 10rpx;
+  animation: rotate 0.8s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* 壁纸预览弹窗样式 - 修改为全屏显示 */
+.preview-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.preview-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.preview-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.preview-image {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.preview-actions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.action-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20rpx 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  font-size: 26rpx;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.action-btn::after {
+  border: none;
+}
+
+.action-icon {
+  font-size: 40rpx;
+  margin-bottom: 6rpx;
+}
+
+.like-btn {
+  color: #ff6b6b;
+}
+
+.download-btn {
+  color: #1296db;
+}
+
+.share-btn {
+  color: #20bf6b;
+}
+
+.close-btn {
+  position: absolute;
+  top: 40rpx;
+  right: 40rpx;
+  width: 80rpx;
+  height: 80rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50rpx;
+  z-index: 10;
+}
+
+/* 底部导航栏 */
+.tabbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  background: #ffffff;
+  display: flex;
+  padding-bottom: env(safe-area-inset-bottom);
+  border-top: 1rpx solid #eee;
+}
+
+.tab-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rpx 0;
+}
+
+.tab-icon {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.tab-text {
+  font-size: 20rpx;
+  color: #333;
+  margin-top: 4rpx;
+}

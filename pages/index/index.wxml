@@ -1,0 +1,59 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <!-- 顶部类别选择 -->
+  <scroll-view scroll-x class="category-scroll" enhanced show-scrollbar="{{false}}">
+    <view class="category-list">
+      <view 
+        class="category-item {{currentCategory === item ? 'active' : ''}}" 
+        wx:for="{{categories}}" 
+        wx:key="*this"
+        bindtap="changeCategory"
+        data-category="{{item}}"
+      >
+        {{item}}
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 壁纸列表 -->
+  <view class="wallpaper-list">
+    <view 
+      class="wallpaper-item" 
+      wx:for="{{wallpapers}}" 
+      wx:key="id"
+      wx:if="{{currentCategory === '全部' || item.category === currentCategory}}"
+      bindtap="previewWallpaper"
+      data-index="{{index}}"
+    >
+      <image class="wallpaper-image" src="{{item.url}}" mode="aspectFill" lazy-load></image>
+    </view>
+  </view>
+
+  <!-- 加载更多提示 -->
+  <view class="loading-container">
+    <view wx:if="{{loading}}" class="loading">
+      <text>加载中...</text>
+    </view>
+    <view wx:elif="{{!hasMore}}" class="no-more">
+      <text>没有更多壁纸了</text>
+    </view>
+  </view>
+
+  <!-- 壁纸预览弹窗 - 全屏显示 -->
+  <view class="preview-modal {{showPreview ? 'show' : ''}}" wx:if="{{showPreview}}">
+    <view class="preview-container">
+      <image class="preview-image" src="{{currentWallpaper.url}}" mode="aspectFit"></image>
+      <view class="preview-actions">
+        <button class="action-btn download-btn" bindtap="downloadWallpaper">
+          <text class="action-icon">↓</text>
+          <text>下载</text>
+        </button>
+        <button class="action-btn share-btn" open-type="share">
+          <text class="action-icon">↗</text>
+          <text>分享</text>
+        </button>
+      </view>
+      <view class="close-btn" bindtap="closePreview">×</view>
+    </view>
+  </view>
+</view>

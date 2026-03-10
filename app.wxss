@@ -1,0 +1,24 @@
+/**app.wxss**/
+page {
+  background-color: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+  padding-bottom: 120rpx;
+}

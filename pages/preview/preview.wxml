@@ -1,0 +1,15 @@
+<swiper class="preview-swiper" bindchange="handleSwiperChange" current="{{currentIndex}}" duration="300">
+    <swiper-item wx:for="{{images}}" wx:key="url">
+        <image class="preview-image" src="{{item.url}}" mode="aspectFill" bindtap="toggleControls"></image>
+    </swiper-item>
+</swiper>
+<view class="controls {{showControls ? '' : 'hidden'}}">
+    <view class="nav-bar">
+        <view class="back" bindtap="goBack">
+            <text>←</text>
+        </view>
+    </view>
+    <view class="bottom-bar">
+        <button class="download-btn" bindtap="downloadImage">立即下载</button>
+    </view>
+</view>

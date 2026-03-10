@@ -1,0 +1,117 @@
+/* pages/about/about.wxss */
+.container {
+  padding: 40rpx 30rpx;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60rpx;
+}
+
+.logo {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 24rpx;
+  margin-bottom: 20rpx;
+}
+
+.app-name {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.version {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 16rpx;
+  border-bottom: 1rpx solid #eee;
+  padding-bottom: 15rpx;
+}
+
+.card-content {
+  padding: 10rpx 0;
+}
+
+.description {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.6;
+}
+
+.feature-list {
+  margin-top: 20rpx;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10rpx;
+}
+
+.feature-dot {
+  font-size: 28rpx;
+  color: #1296db;
+  margin-right: 10rpx;
+}
+
+.feature-text {
+  font-size: 28rpx;
+  color: #666;
+  flex: 1;
+}
+
+.contact-item {
+  display: flex;
+  margin-bottom: 15rpx;
+}
+
+.contact-label {
+  font-size: 28rpx;
+  color: #666;
+  width: 120rpx;
+}
+
+.contact-value {
+  font-size: 28rpx;
+  color: #333;
+  flex: 1;
+}
+
+.email {
+  color: #1296db;
+}
+
+.feedback-button {
+  background-color: #1296db;
+  color: #fff;
+  text-align: center;
+  padding: 20rpx 0;
+  border-radius: 10rpx;
+  margin: 40rpx 0;
+  font-size: 30rpx;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 40rpx;
+}

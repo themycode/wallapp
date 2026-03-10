@@ -1,0 +1,73 @@
+/* pages/components/components.wxss */
+.container {
+  padding: 20rpx;
+}
+
+.header {
+  padding: 30rpx 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.component-list {
+  padding: 20rpx;
+}
+
+.component-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+  padding: 30rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.component-icon {
+  width: 80rpx;
+  height: 80rpx;
+  background-color: #1296db;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.component-info {
+  flex: 1;
+}
+
+.component-name {
+  font-size: 32rpx;
+  color: #333;
+  display: block;
+  margin-bottom: 6rpx;
+}
+
+.component-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  margin-bottom: 16rpx;
+  color: #333;
+}
+
+.component-desc {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.5;
+}
+
+.arrow {
+  font-size: 36rpx;
+  color: #ccc;
+}
